@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="es-DO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GMP · Global Media Partners. Red de pantallas digitales DOOH premium en Punta Cana. Su marca donde el consumidor ya tiene la billetera en la mano.">
+<meta name="theme-color" content="#0a0e14">
+<meta property="og:title" content="GMP · Global Media Partners · Publicidad DOOH en Punta Cana">
+<meta property="og:description" content="Pantallas digitales de 55&quot; en estaciones premium. 288+ reproducciones diarias de su spot de 15 segundos. Desde US$400/mes.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/pantalla-united-card.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>GMP · Global Media Partners · DOOH Punta Cana</title>
+<style>
+  :root{
+    --bg:#0a0e14;
+    --bg-2:#0f1520;
+    --card:#131a26;
+    --card-2:#1a2332;
+    --border:#1f2937;
+    --border-2:#2a3645;
+    --text:#e5e7eb;
+    --text-soft:#cbd5e1;
+    --muted:#94a3b8;
+    --cyan:#22d3ee;
+    --cyan-dark:#0891b2;
+    --magenta:#d946ef;
+    --gold:#fbbf24;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+
+  /* NAV */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(10,14,20,0.85);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+  }
+  nav .container{display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+  .logo-img{height:36px;width:auto}
+  .nav-links{display:flex;gap:28px}
+  .nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--cyan)}
+  .nav-cta{
+    background:var(--cyan);color:#04111a;padding:10px 20px;border-radius:8px;
+    font-weight:700;font-size:14px;text-decoration:none;transition:transform .2s,background .2s;
+  }
+  .nav-cta:hover{background:var(--cyan-dark);color:#fff;transform:translateY(-1px)}
+  @media(max-width:860px){.nav-links{display:none}}
+
+  /* HERO */
+  .hero{
+    padding:140px 0 100px;
+    background:
+      radial-gradient(ellipse at 20% top,rgba(34,211,238,0.18),transparent 55%),
+      radial-gradient(ellipse at 80% bottom,rgba(217,70,239,0.12),transparent 55%),
+      var(--bg);
+    position:relative;overflow:hidden;
+  }
+  .hero .container{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:center}
+  .hero-badge{
+    display:inline-block;background:rgba(34,211,238,0.1);
+    border:1px solid rgba(34,211,238,0.35);
+    color:var(--cyan);padding:6px 14px;border-radius:999px;
+    font-size:13px;font-weight:600;margin-bottom:24px;letter-spacing:0.3px;
+  }
+  .hero h1{
+    font-size:58px;font-weight:800;line-height:1.05;letter-spacing:-1.5px;
+    margin-bottom:24px;
+  }
+  .hero h1 em{
+    color:var(--cyan);font-style:normal;font-weight:800;
+    background:linear-gradient(90deg,var(--cyan),var(--magenta));
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .hero p.sub{
+    font-size:19px;color:var(--muted);
+    margin-bottom:36px;line-height:1.55;max-width:560px;
+  }
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .btn-primary{
+    background:var(--cyan);color:#04111a;padding:16px 30px;
+    border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;
+    transition:transform .2s,background .2s,box-shadow .2s;
+    display:inline-flex;align-items:center;gap:10px;
+  }
+  .btn-primary:hover{background:#67e8f9;transform:translateY(-2px);box-shadow:0 10px 30px rgba(34,211,238,0.3)}
+  .btn-secondary{
+    background:rgba(255,255,255,0.03);color:var(--text);padding:16px 30px;
+    border:1px solid var(--border-2);border-radius:10px;font-weight:600;
+    font-size:16px;text-decoration:none;transition:border-color .2s,background .2s;
+    display:inline-flex;align-items:center;gap:10px;
+  }
+  .btn-secondary:hover{border-color:var(--cyan);background:rgba(34,211,238,0.05)}
+  .btn-whatsapp{background:#25D366;color:#fff}
+  .btn-whatsapp:hover{background:#1ebe5a}
+
+  .hero-img{
+    position:relative;
+    border-radius:18px;overflow:hidden;
+    box-shadow:0 40px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.06);
+    aspect-ratio:9/14;
+    background:#000;
+  }
+  .hero-img img{width:100%;height:100%;object-fit:cover;object-position:center}
+  .hero-img-caption{
+    position:absolute;bottom:16px;left:16px;right:16px;
+    background:rgba(10,14,20,0.85);backdrop-filter:blur(10px);
+    padding:12px 14px;border-radius:10px;border:1px solid var(--border-2);
+    font-size:12px;color:var(--muted);
+  }
+  .hero-img-caption b{color:var(--cyan);font-weight:700}
+
+  .hero-stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+    margin:72px 0 0;padding-top:36px;border-top:1px solid var(--border);
+    grid-column:1/-1;
+  }
+  .stat .n{font-size:36px;font-weight:800;
+    background:linear-gradient(90deg,var(--cyan),var(--magenta));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    line-height:1;
+  }
+  .stat .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;margin-top:10px}
+  @media(max-width:900px){
+    .hero{padding:110px 0 60px}
+    .hero .container{grid-template-columns:1fr;gap:40px}
+    .hero h1{font-size:38px}
+    .hero p.sub{font-size:17px}
+    .hero-img{max-width:340px;margin:0 auto;aspect-ratio:9/14}
+    .hero-stats{grid-template-columns:repeat(2,1fr);gap:20px;margin-top:50px}
+    .stat .n{font-size:28px}
+  }
+
+  /* SECTIONS */
+  section{padding:100px 0}
+  .section-header{text-align:center;max-width:760px;margin:0 auto 64px}
+  .section-tag{
+    color:var(--cyan);font-size:13px;font-weight:700;
+    text-transform:uppercase;letter-spacing:2.5px;margin-bottom:16px;
+  }
+  .section-header h2{
+    font-size:44px;font-weight:800;line-height:1.1;
+    letter-spacing:-1px;margin-bottom:18px;
+  }
+  .section-header p{font-size:18px;color:var(--muted)}
+  @media(max-width:768px){
+    section{padding:70px 0}
+    .section-header h2{font-size:30px}
+    .section-header p{font-size:16px}
+  }
+
+  /* WHY */
+  .why{background:var(--bg-2)}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .why-card{
+    background:var(--card);border:1px solid var(--border);
+    padding:32px;border-radius:14px;transition:border-color .2s,transform .2s;
+  }
+  .why-card:hover{border-color:var(--cyan);transform:translateY(-4px)}
+  .why-icon{
+    width:52px;height:52px;
+    background:linear-gradient(135deg,rgba(34,211,238,0.15),rgba(217,70,239,0.1));
+    border:1px solid rgba(34,211,238,0.25);
+    border-radius:12px;display:flex;align-items:center;justify-content:center;
+    margin-bottom:20px;font-size:24px;
+  }
+  .why-card h3{font-size:19px;font-weight:700;margin-bottom:10px}
+  .why-card p{color:var(--muted);font-size:15px;line-height:1.55}
+  @media(max-width:768px){.why-grid{grid-template-columns:1fr}}
+
+  /* HARDWARE */
+  .hardware{position:relative}
+  .hardware-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+    background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;
+  }
+  .hw-cell{padding:40px 28px;text-align:center;border-right:1px solid var(--border)}
+  .hw-cell:last-child{border-right:none}
+  .hw-n{font-size:56px;font-weight:900;
+    background:linear-gradient(135deg,var(--cyan),var(--magenta));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    line-height:1;
+  }
+  .hw-cell h4{font-size:14px;text-transform:uppercase;letter-spacing:2px;color:var(--text);margin:16px 0 12px;font-weight:700}
+  .hw-cell p{font-size:14px;color:var(--muted);max-width:240px;margin:0 auto}
+  @media(max-width:768px){
+    .hardware-grid{grid-template-columns:1fr}
+    .hw-cell{border-right:none;border-bottom:1px solid var(--border)}
+    .hw-cell:last-child{border-bottom:none}
+  }
+
+  /* LOCATION + MAP */
+  .location{background:var(--bg-2)}
+  .loc-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:stretch}
+  .loc-info h3{font-size:30px;font-weight:800;margin-bottom:12px;line-height:1.2}
+  .loc-info .addr-pin{color:var(--cyan);font-size:14px;font-weight:600;margin-bottom:24px;display:flex;align-items:center;gap:8px}
+  .loc-info p{color:var(--muted);font-size:16px;margin-bottom:24px;line-height:1.6}
+  .loc-points{list-style:none}
+  .loc-points li{padding:10px 0;color:var(--text-soft);font-size:15px;display:flex;gap:12px;align-items:flex-start}
+  .loc-points li::before{content:"▸";color:var(--magenta);font-weight:900;flex-shrink:0;font-size:16px}
+  .loc-map{
+    border-radius:14px;overflow:hidden;border:1px solid var(--border);
+    min-height:420px;background:#0a0e14;
+  }
+  .loc-map iframe{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(0.15) contrast(1.1) brightness(0.92)}
+  @media(max-width:860px){
+    .loc-grid{grid-template-columns:1fr}
+    .loc-map{min-height:340px}
+    .loc-map iframe{min-height:340px}
+  }
+
+  /* AUDIENCE */
+  .audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .audience-img{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:14px;padding:32px;display:flex;align-items:center;justify-content:center;
+  }
+  .audience-img img{max-width:100%;border-radius:8px}
+  .audience-info h3{font-size:32px;font-weight:800;margin-bottom:18px;line-height:1.15}
+  .audience-info p{color:var(--muted);margin-bottom:18px;font-size:16px}
+  .audience-list{list-style:none}
+  .audience-list li{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:14px 0;border-bottom:1px solid var(--border);
+  }
+  .audience-list li:last-child{border-bottom:none}
+  .audience-list .al-label{font-weight:500}
+  .audience-list .al-pct{
+    font-weight:800;font-size:18px;
+    background:linear-gradient(90deg,var(--cyan),var(--magenta));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  @media(max-width:860px){.audience-grid{grid-template-columns:1fr}}
+
+  /* PACKAGES */
+  .packages{background:var(--bg-2)}
+  .pkg-min-notice{
+    max-width:760px;margin:0 auto 40px;padding:14px 20px;
+    background:linear-gradient(90deg,rgba(34,211,238,0.08),rgba(217,70,239,0.05));
+    border:1px solid rgba(34,211,238,0.25);
+    border-radius:12px;text-align:center;
+    font-size:15px;color:var(--text-soft);
+  }
+  .pkg-min-notice b{color:var(--cyan);font-weight:700}
+  .packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .pkg{
+    background:var(--card);border:1px solid var(--border);
+    padding:36px 28px;border-radius:16px;position:relative;
+    transition:transform .2s,border-color .2s,box-shadow .2s;
+  }
+  .pkg:hover{transform:translateY(-6px)}
+  .pkg.featured{
+    border-color:var(--magenta);
+    box-shadow:0 0 0 1px var(--magenta),0 20px 60px rgba(217,70,239,0.18);
+  }
+  .pkg-badge{
+    position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+    background:linear-gradient(90deg,var(--cyan),var(--magenta));
+    color:#0a0e14;padding:4px 14px;
+    border-radius:999px;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+  }
+  .pkg-fmt{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;font-weight:600;margin-bottom:8px}
+  .pkg h3{font-size:26px;font-weight:800;margin-bottom:4px}
+  .pkg .price{font-size:40px;font-weight:900;margin:18px 0 2px;line-height:1}
+  .pkg .price .cur{font-size:18px;color:var(--muted);font-weight:600;margin-right:4px}
+  .pkg .price .per{font-style:normal;color:var(--muted);font-size:15px;font-weight:500}
+  .pkg .tax{font-size:12px;color:var(--muted);margin-bottom:22px}
+  .pkg ul{list-style:none;padding:0;margin:24px 0}
+  .pkg li{
+    padding:11px 0;color:var(--text-soft);font-size:14px;
+    border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;
+  }
+  .pkg li:last-child{border-bottom:none}
+  .pkg li::before{content:"✓";color:var(--cyan);font-weight:800;flex-shrink:0}
+  .pkg .btn{
+    display:block;text-align:center;margin-top:16px;
+    padding:14px;border-radius:10px;text-decoration:none;font-weight:700;
+    transition:background .2s,transform .2s;
+  }
+  .pkg.featured .btn{background:linear-gradient(90deg,var(--cyan),var(--magenta));color:#0a0e14}
+  .pkg.featured .btn:hover{transform:translateY(-1px);filter:brightness(1.1)}
+  .pkg:not(.featured) .btn{background:transparent;border:1px solid var(--border-2);color:var(--text)}
+  .pkg:not(.featured) .btn:hover{border-color:var(--cyan);background:rgba(34,211,238,0.06)}
+  @media(max-width:860px){.packages-grid{grid-template-columns:1fr}}
+
+  /* DISCOUNT TABLE */
+  .disc-table{
+    max-width:900px;margin:40px auto 0;background:var(--card);
+    border:1px solid var(--border);border-radius:14px;overflow:hidden;
+  }
+  .disc-table table{width:100%;border-collapse:collapse;font-size:14px}
+  .disc-table th,.disc-table td{padding:14px 16px;text-align:center;border-bottom:1px solid var(--border)}
+  .disc-table th{background:var(--bg-2);color:var(--cyan);text-transform:uppercase;letter-spacing:1px;font-size:11px;font-weight:700}
+  .disc-table td:first-child,.disc-table th:first-child{text-align:left}
+  .disc-table tr:last-child td{border-bottom:none}
+  .disc-table .save{color:var(--gold);font-weight:700;font-size:12px}
+  .disc-table .best{background:rgba(217,70,239,0.08)}
+
+  /* PROCESS */
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}
+  .step{
+    background:var(--card);padding:32px 22px;border-radius:14px;
+    border:1px solid var(--border);position:relative;
+  }
+  .step-num{
+    position:absolute;top:-16px;left:22px;
+    width:40px;height:40px;background:linear-gradient(135deg,var(--cyan),var(--magenta));color:#04111a;
+    border-radius:10px;display:flex;align-items:center;justify-content:center;
+    font-weight:900;font-size:18px;
+  }
+  .step h4{font-size:16px;font-weight:700;margin:16px 0 10px}
+  .step p{font-size:14px;color:var(--muted);line-height:1.5}
+  @media(max-width:860px){.process-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.process-grid{grid-template-columns:1fr}}
+
+  /* ROADMAP */
+  .roadmap{background:var(--bg-2)}
+  .roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .roadmap-card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:14px;overflow:hidden;
+  }
+  .roadmap-img{height:180px;background:#000;overflow:hidden}
+  .roadmap-img img{width:100%;height:100%;object-fit:cover}
+  .roadmap-body{padding:24px}
+  .roadmap-date{color:var(--cyan);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
+  .roadmap-body h4{font-size:18px;font-weight:700;margin-bottom:6px}
+  .roadmap-body p{color:var(--muted);font-size:14px}
+  @media(max-width:768px){.roadmap-grid{grid-template-columns:1fr}}
+
+  /* PHILOSOPHY */
+  .philosophy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .phil-card{
+    background:var(--card);border:1px solid var(--border);
+    padding:36px 28px;border-radius:14px;text-align:center;
+  }
+  .phil-icon{
+    width:60px;height:60px;margin:0 auto 20px;
+    border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:28px;
+    background:linear-gradient(135deg,rgba(34,211,238,0.15),rgba(217,70,239,0.1));
+    border:1px solid rgba(34,211,238,0.3);
+  }
+  .phil-card h4{font-size:20px;font-weight:800;margin-bottom:12px;color:var(--cyan)}
+  .phil-card p{color:var(--muted);font-size:14px;line-height:1.6}
+  @media(max-width:860px){.philosophy-grid{grid-template-columns:1fr}}
+
+  /* CTA */
+  .cta-section{
+    background:
+      radial-gradient(ellipse at 30% 50%,rgba(34,211,238,0.15),transparent 60%),
+      radial-gradient(ellipse at 70% 50%,rgba(217,70,239,0.1),transparent 60%),
+      var(--bg);
+    border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  }
+  .cta-box{text-align:center;max-width:720px;margin:0 auto}
+  .cta-box h2{font-size:46px;font-weight:900;letter-spacing:-1px;margin-bottom:20px;line-height:1.1}
+  .cta-box p{font-size:19px;color:var(--muted);margin-bottom:36px}
+  .cta-box .hero-ctas{justify-content:center}
+  @media(max-width:768px){.cta-box h2{font-size:30px}.cta-box p{font-size:16px}}
+
+  /* FORM */
+  .form-section{padding:100px 0}
+  .form-wrap{max-width:640px;margin:0 auto;background:var(--card);padding:48px;border-radius:18px;border:1px solid var(--border)}
+  .form-wrap h3{font-size:30px;font-weight:800;margin-bottom:8px;text-align:center;letter-spacing:-0.5px}
+  .form-wrap .lead{color:var(--muted);text-align:center;margin-bottom:32px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:12px;font-weight:700;margin-bottom:8px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+  .field input,.field select,.field textarea{
+    width:100%;padding:14px 16px;background:var(--bg);
+    border:1px solid var(--border-2);border-radius:10px;color:var(--text);
+    font-family:inherit;font-size:15px;transition:border-color .2s,background .2s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;border-color:var(--cyan);background:#0d131c;
+  }
+  .field textarea{resize:vertical;min-height:110px}
+  .form-submit{
+    width:100%;padding:16px;background:linear-gradient(90deg,var(--cyan),var(--magenta));color:#04111a;
+    border:none;border-radius:10px;font-weight:800;font-size:16px;
+    cursor:pointer;transition:transform .2s,filter .2s;
+  }
+  .form-submit:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  .form-alt{font-size:13px;color:var(--muted);text-align:center;margin-top:18px}
+  .form-alt a{color:var(--cyan);text-decoration:none;font-weight:600}
+  .form-alt a:hover{text-decoration:underline}
+  @media(max-width:768px){.form-wrap{padding:32px 22px}.form-wrap h3{font-size:24px}}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--border);padding:56px 0 32px;background:var(--bg-2)}
+  .ft-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+  .ft-about img{height:36px;margin-bottom:16px}
+  .ft-about p{color:var(--muted);font-size:14px;line-height:1.6;max-width:340px}
+  .ft-col h5{font-size:12px;color:var(--cyan);text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:16px}
+  .ft-col ul{list-style:none}
+  .ft-col li{margin-bottom:10px}
+  .ft-col a{color:var(--text-soft);text-decoration:none;font-size:14px;transition:color .2s}
+  .ft-col a:hover{color:var(--cyan)}
+  .ft-bottom{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+    padding-top:24px;border-top:1px solid var(--border);
+  }
+  .ft-copy{color:var(--muted);font-size:13px}
+  .ft-social{display:flex;gap:12px}
+  .ft-social a{
+    width:38px;height:38px;border:1px solid var(--border-2);
+    border-radius:10px;display:flex;align-items:center;justify-content:center;
+    color:var(--muted);text-decoration:none;transition:border-color .2s,color .2s;
+  }
+  .ft-social a:hover{border-color:var(--cyan);color:var(--cyan)}
+  .ft-social svg{width:18px;height:18px;fill:currentColor}
+  @media(max-width:768px){.ft-grid{grid-template-columns:1fr;gap:28px}.ft-about img{height:30px}}
+
+  /* WHATSAPP FLOAT */
+  .whatsapp-float{
+    position:fixed;bottom:24px;right:24px;z-index:40;
+    width:60px;height:60px;background:#25D366;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 30px rgba(37,211,102,0.4);
+    transition:transform .2s;text-decoration:none;
+  }
+  .whatsapp-float:hover{transform:scale(1.08)}
+  .whatsapp-float svg{width:32px;height:32px;fill:#fff}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="javascript:void(0)" onclick="openLightbox('logo.png','GMP · Global Media Partners')" aria-label="GMP"><img class="logo-img" src="logo.png" alt="GMP · Global Media Partners"></a>
+    <div class="nav-links">
+      <a href="#porque">Por qué</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#audiencia">Audiencia</a>
+      <a href="#paquetes">Paquetes</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#roadmap">Expansión</a>
+    </div>
+    <a class="nav-cta" href="#contacto">Agendar llamada</a>
+  </div>
+</nav>
+
+<section class="hero" id="top">
+  <div class="container">
+    <div>
+      <div class="hero-badge">⚡ Pantallas DOOH premium · Punta Cana</div>
+      <h1><em>Impacto real, atención garantizada.</em></h1>
+      <p class="sub">Red de pantallas digitales de 55" en estaciones de servicio premium. Spots de 15 segundos, 18 horas al día, frente a turistas internacionales y residentes ABC1 en el momento exacto de compra.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="#paquetes">Ver paquetes →</a>
+        <a class="btn-secondary btn-whatsapp" href="https://wa.me/18492617518?text=Hola%20GMP%2C%20quiero%20informaci%C3%B3n%20sobre%20publicidad%20en%20sus%20pantallas" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp directo
+        </a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="assets/pantalla-united-hero.jpg" alt="Pantalla GMP activa en la estación United Petroleum, Punta Cana">
+      <div class="hero-img-caption"><b>LIVE</b> · Pantalla GMP operando hoy en United Petroleum, Boulevard Turístico del Este, Punta Cana.</div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="n">55"</div><div class="l">Pantallas HD</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">Pantallas activas</div></div>
+      <div class="stat"><div class="n">18h</div><div class="l">Operación diaria</div></div>
+      <div class="stat"><div class="n">288+</div><div class="l">Spots / día</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="porque">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Por qué funciona</div>
+      <h2>No es publicidad que se salta. Es publicidad que se ve.</h2>
+      <p>A diferencia de redes sociales, TV o radio, DOOH es el único medio que no se silencia, no se bloquea y no se skipea.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <h3>Atención cautiva</h3>
+        <p>Durante el llenado de combustible el conductor tiene los ojos fijos al frente del dispensador. Exposición obligatoria, cero fricción.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📍</div>
+        <h3>Ubicación de alto valor</h3>
+        <p>Estaciones United Petroleum en el Boulevard Turístico del Este. Tráfico sostenido de turistas internacionales y residentes ABC1.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">👁️</div>
+        <h3>100% visibilidad, cero skip</h3>
+        <p>Spots de 15 segundos en pantallas 55" de alta resolución. El consumidor los ve completos mientras espera — sin ad blockers, sin scroll.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <h3>Del brief al aire en 48h</h3>
+        <p>Usted manda el creativo, nosotros lo subimos. Cambios de arte disponibles sin costo en contratos largos.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🇩🇴</div>
+        <h3>Dominicano, operado localmente</h3>
+        <p>Equipo en terreno. Conocemos los ciclos de promo, los horarios de tráfico real y las temporadas turísticas de Punta Cana.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💰</div>
+        <h3>ROI en el último metro</h3>
+        <p>Ideal para promos, descuentos, aperturas y branding. Activa la decisión de compra en el momento de mayor intención.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hardware">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Hardware &amp; alcance</div>
+      <h2>La red en números</h2>
+    </div>
+    <div class="hardware-grid">
+      <div class="hw-cell">
+        <div class="hw-n">55"</div>
+        <h4>Pantallas HD</h4>
+        <p>Equipos de alta resolución y brillo, ubicados estratégicamente para máximo impacto visual desde el vehículo.</p>
+      </div>
+      <div class="hw-cell">
+        <div class="hw-n">18h</div>
+        <h4>Operación diaria</h4>
+        <p>Transmisión continua desde la apertura hasta el cierre, abarcando los principales picos de tráfico vehicular.</p>
+      </div>
+      <div class="hw-cell">
+        <div class="hw-n">288+</div>
+        <h4>Reproducciones</h4>
+        <p>Mínimo de repeticiones diarias de tu anuncio de 15 segundos, asegurando una alta frecuencia de impacto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="location" id="ubicacion">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Ubicación premium</div>
+      <h2>United Petroleum, Punta Cana</h2>
+      <p>Intercepta a un consumidor de alto valor adquisitivo en el polo turístico más importante del país.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-info">
+        <h3>Boulevard Turístico del Este</h3>
+        <div class="addr-pin">📍 Verón, Punta Cana, R.D.</div>
+        <p>La estación está sobre la arteria principal que conecta el aeropuerto internacional de Punta Cana con el corredor hotelero de Bávaro — punto de paso obligatorio para turistas, transportistas y residentes del este.</p>
+        <ul class="loc-points">
+          <li>Ubicación de tránsito obligado para turistas y locales.</li>
+          <li>Infraestructura moderna que atrae clientes preferenciales.</li>
+          <li>Entorno seguro y controlado ideal para visualizar DOOH.</li>
+          <li>Cercanía directa a Blue Mall Puntacana y zonas hoteleras.</li>
+        </ul>
+      </div>
+      <div class="loc-map">
+        <iframe
+          src="https://www.google.com/maps?q=United+Petroleum+Ver%C3%B3n+Punta+Cana&amp;output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación GMP · United Petroleum Punta Cana"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="audiencia">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Tráfico &amp; perfil del consumidor</div>
+      <h2>1,400 clientes diarios máximo</h2>
+      <p>No es tráfico genérico. Es audiencia premium en el momento exacto de compra.</p>
+    </div>
+    <div class="audience-grid">
+      <div class="audience-img">
+        <img src="assets/audience-chart.jpg" alt="Composición de audiencia GMP — 1,400 clientes diarios máximo">
+      </div>
+      <div class="audience-info">
+        <h3>¿Quién ve su anuncio?</h3>
+        <p>Mezcla de turistas internacionales, transporte turístico organizado y residentes del polo este con alto poder adquisitivo — exactamente el perfil que las marcas premium buscan.</p>
+        <ul class="audience-list">
+          <li><span class="al-label">Turista internacional</span><span class="al-pct">15%</span></li>
+          <li><span class="al-label">Transporte turístico</span><span class="al-pct">25%</span></li>
+          <li><span class="al-label">Uber &amp; taxis</span><span class="al-pct">20%</span></li>
+          <li><span class="al-label">Locales</span><span class="al-pct">15%</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="packages" id="paquetes">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Paquetes mensuales</div>
+      <h2>Elija cómo quiere aparecer</h2>
+      <p>Los precios mostrados son por anuncio / mes + ITBIS. Las 4 pantallas de la red incluidas. 288 repeticiones diarias por pantalla.</p>
+    </div>
+    <div class="pkg-min-notice">
+      <b>Mínimo de contratación: 2 anuncios</b> en cualquier combinación (imagen + imagen, imagen + video, video + GIF, etc.). Facturación mensual en USD + ITBIS.
+    </div>
+    <div class="packages-grid">
+      <div class="pkg">
+        <div class="pkg-fmt">Imagen</div>
+        <h3>Imagen estática</h3>
+        <div class="price"><span class="cur">US$</span>400<em class="per"> / mes</em></div>
+        <div class="tax">por anuncio · + ITBIS</div>
+        <ul>
+          <li>4 pantallas de la red</li>
+          <li>288 repeticiones diarias</li>
+          <li>Exposición de 8 segundos por repetición</li>
+          <li>Setup en 48h</li>
+          <li>Ideal para branding y promos simples</li>
+        </ul>
+        <a class="btn" href="#contacto">Empezar</a>
+      </div>
+      <div class="pkg featured">
+        <div class="pkg-badge">Más popular</div>
+        <div class="pkg-fmt">Cápsula de video</div>
+        <h3>Video completo</h3>
+        <div class="price"><span class="cur">US$</span>600<em class="per"> / mes</em></div>
+        <div class="tax">por anuncio · + ITBIS</div>
+        <ul>
+          <li>4 pantallas de la red</li>
+          <li>288 repeticiones diarias</li>
+          <li>Exposición de 12 segundos por repetición</li>
+          <li>Mayor recordación y contar historia</li>
+          <li>Setup en 48h</li>
+          <li>Formato ideal para lanzamientos</li>
+        </ul>
+        <a class="btn" href="#contacto">Agendar llamada</a>
+      </div>
+      <div class="pkg">
+        <div class="pkg-fmt">GIF / animación</div>
+        <h3>GIF animado</h3>
+        <div class="price"><span class="cur">US$</span>500<em class="per"> / mes</em></div>
+        <div class="tax">por anuncio · + ITBIS</div>
+        <ul>
+          <li>4 pantallas de la red</li>
+          <li>288 repeticiones diarias</li>
+          <li>Exposición de 10 segundos por repetición</li>
+          <li>Movimiento sin producción de video</li>
+          <li>Costo intermedio, alto impacto</li>
+        </ul>
+        <a class="btn" href="#contacto">Conversemos</a>
+      </div>
+    </div>
+
+    <div class="disc-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Duración</th>
+            <th>Descuento</th>
+            <th>Imagen</th>
+            <th>GIF</th>
+            <th>Video</th>
+            <th>Ahorro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 mes</td>
+            <td>—</td>
+            <td>US$400</td>
+            <td>US$500</td>
+            <td>US$600</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>6 meses</td>
+            <td>5%</td>
+            <td>US$380</td>
+            <td>US$475</td>
+            <td>US$570</td>
+            <td class="save">+US$30 off</td>
+          </tr>
+          <tr class="best">
+            <td>12 meses ★</td>
+            <td>10%</td>
+            <td>US$360</td>
+            <td>US$450</td>
+            <td>US$540</td>
+            <td class="save">+US$60 off</td>
+          </tr>
+          <tr>
+            <td>+19 meses</td>
+            <td>15%</td>
+            <td>US$340</td>
+            <td>US$425</td>
+            <td>US$510</td>
+            <td class="save">+US$90 off</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:24px">★ Descuentos aplican pagando la duración completa por adelantado. Precios por anuncio/mes en USD + ITBIS. Facturación local en DOP al tipo de cambio del día.</p>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Proceso</div>
+      <h2>Del primer contacto al aire en 5 días</h2>
+    </div>
+    <div class="process-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Llamada de 15 min</h4>
+        <p>Entendemos su marca, objetivo de campaña y fechas de salida.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Propuesta y contrato</h4>
+        <p>Paquete recomendado, términos claros y fechas firmes. Cero letra chica.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Creativo</h4>
+        <p>Usted nos entrega el arte. Si necesita producción, conectamos con partners creativos.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Al aire</h4>
+        <p>Subimos, validamos y lanzamos. 48 horas desde la aprobación del arte final.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="roadmap" id="roadmap">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Expansión 2026</div>
+      <h2>La red sigue creciendo</h2>
+      <p>Compromisos de expansión confirmados durante 2026. Clientes actuales tienen primera opción en cada nueva locación.</p>
+    </div>
+    <div class="roadmap-grid">
+      <div class="roadmap-card">
+        <div class="roadmap-img"><img src="assets/bluemall-front.jpg" alt="Blue Mall Puntacana"></div>
+        <div class="roadmap-body">
+          <div class="roadmap-date">Julio 2026</div>
+          <h4>Blue Mall Puntacana</h4>
+          <p>Boulevard Turístico del Este. Retail premium, consumidor ABC1. Pantalla exterior de acceso.</p>
+        </div>
+      </div>
+      <div class="roadmap-card">
+        <div class="roadmap-img" style="background:linear-gradient(135deg,#1a2332,#0f1520);display:flex;align-items:center;justify-content:center"><div style="color:var(--cyan);font-size:44px;font-weight:900">⛽</div></div>
+        <div class="roadmap-body">
+          <div class="roadmap-date">Octubre 2026</div>
+          <h4>Texaco · Lope de Vega</h4>
+          <p>Estación insignia sobre la Av. Lope de Vega, Santo Domingo. Tráfico corporativo y comercial.</p>
+        </div>
+      </div>
+      <div class="roadmap-card">
+        <div class="roadmap-img" style="background:linear-gradient(135deg,#1a2332,#0f1520);display:flex;align-items:center;justify-content:center"><div style="color:var(--magenta);font-size:44px;font-weight:900">⛽</div></div>
+        <div class="roadmap-body">
+          <div class="roadmap-date">Diciembre 2026</div>
+          <h4>Total Energies · Tiradentes</h4>
+          <p>Av. Tiradentes, Santo Domingo. Corredor financiero, tráfico de oficina nivel gerencial.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Nuestra filosofía</div>
+      <h2>Impacto real, atención garantizada.</h2>
+    </div>
+    <div class="philosophy-grid">
+      <div class="phil-card">
+        <div class="phil-icon">💎</div>
+        <h4>Valor</h4>
+        <p>Creemos que el verdadero impacto no se mide solo en impresiones digitales, sino en la atención garantizada y la conexión real y medible.</p>
+      </div>
+      <div class="phil-card">
+        <div class="phil-icon">🎯</div>
+        <h4>Misión</h4>
+        <p>Garantizar que las personas vean tu anuncio en un momento sin distracciones, enfocados totalmente en nuestras pantallas.</p>
+      </div>
+      <div class="phil-card">
+        <div class="phil-icon">👁️</div>
+        <h4>Visión</h4>
+        <p>Transformar los espacios de espera, recordando que con GMP el público no pasa de prisa, sino que está frente a tu marca.</p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:40px;font-size:20px;font-style:italic;color:var(--text-soft)">"El público no pasa frente al anuncio... <span style="background:linear-gradient(90deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-weight:700;font-style:normal">está frente a él</span>."</p>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box">
+      <h2>¿Listo para que su marca aparezca?</h2>
+      <p>Agendemos 15 minutos. Le mostramos la red, los números y un plan concreto para su campaña.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="#contacto">Pedir propuesta</a>
+        <a class="btn-secondary btn-whatsapp" href="https://wa.me/18492617518?text=Hola%20GMP%2C%20quiero%20agendar%20una%20llamada" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escribir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="form-section" id="contacto">
+  <div class="container">
+    <div class="form-wrap">
+      <h3>Pida su propuesta</h3>
+      <p class="lead">Respondemos en menos de 24 horas hábiles.</p>
+      <form id="leadForm" onsubmit="return submitLead(event)">
+        <div class="field">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="company">Empresa</label>
+          <input type="text" id="company" name="company" required autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="email">Correo</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="phone">WhatsApp o teléfono</label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="package">Formato de interés</label>
+          <select id="package" name="package">
+            <option value="imagen">Imagen — US$400/mes por anuncio</option>
+            <option value="video" selected>Video — US$600/mes por anuncio</option>
+            <option value="gif">GIF — US$500/mes por anuncio</option>
+            <option value="combo">Combo (cumple mínimo de 2)</option>
+            <option value="consultar">Prefiero que me asesoren</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Cuéntenos de su campaña (opcional)</label>
+          <textarea id="message" name="message" placeholder="Objetivo, fechas tentativas, presupuesto aproximado..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Enviar solicitud</button>
+        <p class="form-alt">Al enviar abrimos WhatsApp para completar el contacto. También puede escribirnos directamente a <a href="mailto:globalmediapartners@gmail.com">globalmediapartners@gmail.com</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div class="ft-about">
+        <img src="logo.png" alt="GMP · Global Media Partners" style="max-height:60px;width:auto;cursor:pointer" onclick="openLightbox('logo.png','GMP · Global Media Partners')">
+        <p>Red de pantallas digitales DOOH en Punta Cana. Atención cautiva en el momento de compra — publicidad que no se skipea.</p>
+      </div>
+      <div class="ft-col">
+        <h5>Contacto</h5>
+        <ul>
+          <li><a href="mailto:globalmediapartners@gmail.com">globalmediapartners@gmail.com</a></li>
+          <li><a href="https://wa.me/18492617518" target="_blank" rel="noopener">WhatsApp +1 849-261-7518</a></li>
+          <li><a href="https://www.google.com/maps?q=United+Petroleum+Ver%C3%B3n+Punta+Cana" target="_blank" rel="noopener">Verón, Punta Cana, R.D.</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#porque">Por qué GMP</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#paquetes">Paquetes</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#roadmap">Expansión 2026</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <div class="ft-copy">© 2026 GMP · Global Media Partners · Punta Cana, R.D.</div>
+      <div class="ft-social">
+        <a href="mailto:globalmediapartners@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <a href="https://wa.me/18492617518" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="#contacto" aria-label="Instagram (próximamente)" title="Instagram — próximamente">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/18492617518?text=Hola%20GMP" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<style>
+.lightbox-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);align-items:center;justify-content:center;cursor:zoom-out}
+.lightbox-overlay.active{display:flex}
+.lightbox-overlay img{max-width:90vw;max-height:85vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.lightbox-overlay .lb-close{position:absolute;top:20px;right:24px;color:#fff;font-size:32px;cursor:pointer;background:rgba(255,255,255,.15);border:none;border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center}
+</style>
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+  <button class="lb-close" aria-label="Cerrar">&times;</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+function openLightbox(src,alt){
+  document.getElementById('lb-img').src=src;
+  document.getElementById('lb-img').alt=alt||'';
+  document.getElementById('lightbox').classList.add('active');
+}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('active')}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox()});
+
+function submitLead(e){
+  e.preventDefault();
+  const data=Object.fromEntries(new FormData(e.target).entries());
+  const fmtMap={imagen:'Imagen US$400',video:'Video US$600',gif:'GIF US$500',combo:'Combo (mín. 2)',consultar:'Asesoría'};
+  const fmt=fmtMap[data.package]||data.package;
+  const msg=`Hola GMP, soy ${data.name} de ${data.company}. Formato: ${fmt}. Tel: ${data.phone}. Email: ${data.email}. ${data.message?'Nota: '+data.message:''}`;
+  const url=`https://wa.me/18492617518?text=${encodeURIComponent(msg)}`;
+  window.open(url,'_blank');
+  const mail=`mailto:globalmediapartners@gmail.com?subject=${encodeURIComponent('Nuevo lead desde web · '+data.company)}&body=${encodeURIComponent(msg)}`;
+  setTimeout(()=>window.open(mail,'_self'),400);
+  alert('¡Gracias! Abrimos WhatsApp y correo para completar el envío.');
+  return false;
+}
+</script>
+
+</body>
+</html>
